@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduTrack - Register Student</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+
+        <a href="dashboard.html" class="brand">
+            <span class="brand-icon">E</span>
+
+            <div>
+                <strong>EduTrack</strong>
+                <small>Student Portal</small>
+            </div>
+        </a>
+
+        <nav class="nav-links">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="student.html" class="active">Add Student</a>
+            <a href="student-list.html">Student List</a>
+            <button type="button" onclick="logout()" class="nav-logout">
+                Logout
+            </button>
+        </nav>
+
+    </header>
+
+
+    <main class="form-page">
+
+        <div class="form-card">
+
+            <div class="form-header">
+                <div>
+                    <p class="eyebrow">STUDENT REGISTRATION</p>
+
+                    <h1 id="formTitle">
+                        Register New Student
+                    </h1>
+
+                    <p>
+                        Enter the student's details below.
+                    </p>
+                </div>
+
+                <div class="form-number">01</div>
+            </div>
+
+
+            <form id="studentForm">
+
+                <input type="hidden" id="studentId">
+
+
+                <div class="form-section-title">
+                    <span>01</span>
+                    <div>
+                        <h3>Basic Information</h3>
+                        <p>Personal details</p>
+                    </div>
+                </div>
+
+
+                <div class="form-grid">
+
+                    <div class="field full">
+                        <label for="studentName">Student Name</label>
+
+                        <input
+                            type="text"
+                            id="studentName"
+                            placeholder="Enter full name"
+                        >
+
+                        <small id="studentNameError"></small>
+                    </div>
+
+
+                    <div class="field">
+                        <label for="email">Email Address</label>
+
+                        <input
+                            type="text"
+                            id="email"
+                            placeholder="student@example.com"
+                        >
+
+                        <small id="emailError"></small>
+                    </div>
+
+
+                    <div class="field">
+                        <label for="phone">Phone Number</label>
+
+                        <input
+                            type="text"
+                            id="phone"
+                            maxlength="10"
+                            inputmode="numeric"
+                            placeholder="10 digit phone number"
+                        >
+
+                        <small id="phoneError"></small>
+                    </div>
+
+                </div>
+
+
+                <div class="form-section-title">
+                    <span>02</span>
+                    <div>
+                        <h3>Academic Information</h3>
+                        <p>Department and personal details</p>
+                    </div>
+                </div>
+
+
+                <div class="form-grid">
+
+                    <div class="field">
+                        <label for="department">Department</label>
+
+                        <select id="department">
+
+                            <option value="">
+                                Select Department
+                            </option>
+
+                            <option value="Computer Science">
+                                Computer Science
+                            </option>
+
+                            <option value="Information Technology">
+                                Information Technology
+                            </option>
+
+                            <option value="Electronics">
+                                Electronics
+                            </option>
+
+                            <option value="Mechanical">
+                                Mechanical
+                            </option>
+
+                            <option value="Management">
+                                Management
+                            </option>
+
+                        </select>
+
+                        <small id="departmentError"></small>
+                    </div>
+
+
+                    <div class="field">
+                        <label for="dob">Date of Birth</label>
+
+                        <input
+                            type="date"
+                            id="dob"
+                        >
+
+                        <small id="dobError"></small>
+                    </div>
+
+
+                    <div class="field full">
+                        <label>Gender</label>
+
+                        <div class="gender-options">
+
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="gender"
+                                    value="Male"
+                                >
+                                Male
+                            </label>
+
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="gender"
+                                    value="Female"
+                                >
+                                Female
+                            </label>
+
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="gender"
+                                    value="Other"
+                                >
+                                Other
+                            </label>
+
+                        </div>
+
+                        <small id="genderError"></small>
+                    </div>
+
+                </div>
+
+
+                <div class="form-actions">
+
+                    <button
+                        type="reset"
+                        class="btn secondary"
+                    >
+                        Clear
+                    </button>
+
+                    <button
+                        type="submit"
+                        class="btn primary"
+                        id="submitButton"
+                    >
+                        Register Student
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </main>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
